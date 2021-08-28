@@ -1,0 +1,25 @@
+<div class="container input-principal">
+  <div class="row">
+    <div class="col-10">
+      <input type="text" 
+      class="form-control"
+      placeholder="Digite um número"
+      [(ngModel)]="valueNumber">
+    </div>
+
+    <div class="col-2">
+      <button class="btn btn-primary form-control" (click)="getNumberDecompose()">Buscar</button>
+    </div>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead class="thead-dark" >
+    <tr>Resultado da Busca</tr>
+  </thead>
+  <tbody *ngIf="number != null">
+    <tr>Número: {{number.value}}</tr>
+    <tr>Divisores: {{number.divisors}}</tr>
+    <tr>Divisores Primos: {{number.primeDivisors}}</tr>
+  </tbody>
+</table>
