@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class NumberService {
-  private readonly url = 'http://localhost:1864/api/v1/number?value=';
+  private readonly url = 'http://localhost:1864/api/v1/number/decompose?value=';
 
   constructor(private http: HttpClient) { }
 

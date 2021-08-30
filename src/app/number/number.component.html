@@ -1,25 +1,30 @@
-<div class="container input-principal">
-  <div class="row">
-    <div class="col-10">
-      <input type="text" 
+<div class="container mt-3 mb-3">
+  <div class="row mt-3">
+    <div class="col-6 col-sm-6 col-md-10 col-lg-10 col-xl-10">
+      <input type="number" 
+      id="txtValueNumber"
       class="form-control"
       placeholder="Digite um número"
       [(ngModel)]="valueNumber">
     </div>
 
-    <div class="col-2">
+    <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
       <button class="btn btn-primary form-control" (click)="getNumberDecompose()">Buscar</button>
     </div>
   </div>
-</div>
 
-<table class="table table-striped">
-  <thead class="thead-dark" >
-    <tr>Resultado da Busca</tr>
-  </thead>
-  <tbody *ngIf="number != null">
-    <tr>Número: {{number.value}}</tr>
-    <tr>Divisores: {{number.divisors}}</tr>
-    <tr>Divisores Primos: {{number.primeDivisors}}</tr>
-  </tbody>
-</table>
+  <div class="row mt-3">
+    <div class="col-12" *ngIf="number != null">
+      <h4>Resultado da Busca</h4>
+      <div>
+        <p>Número: {{number.value}}</p>
+        <p>Divisores: {{number.divisors}}</p>
+        <p>Divisores Primos: {{number.primeDivisors}}</p>
+      </div>
+    </div>
+  
+    <div class="col-12" *ngIf="number == null">
+      <h4>Informe um número e clique em Buscar para ver seus divisores!</h4>
+    </div>
+  </div>
+</div>

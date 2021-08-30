@@ -1,3 +1,13 @@
-.text-github{
+.text-right-github{
     text-align: right;
+}
+
+@media (max-width: 425px){
+    .text-right-github{
+        display: none;
+    }
+
+    .text-center-title{
+        text-align: center;
+    }
 }
